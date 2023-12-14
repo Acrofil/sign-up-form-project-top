@@ -3,8 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+html {
+    scroll-behavior: smooth;
+  }
 
 :root {
     --main-page-color: #7a04eb;
@@ -22,8 +26,7 @@
 .container {
     display: flex;
     width: 100%;
-    height: 100vh;
-    
+    height: 100vh; 
 }
 
 
@@ -34,49 +37,197 @@
     justify-content: space-around;
     background-image: url(cyberpunk.avif);
     background-size: cover;
+}
 
+.photoCredit {
+    position: absolute;
+    bottom: 15px;
+    font-size: 16px;
 }
 
 .logo-container {
     display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 100px;
     justify-content: center;
     align-items: center;
-    background-color: rgb(18, 4, 88, 0.4);
-    border-bottom: 1px solid var(--logo-border-color);
-    border-top: 1px solid var(--logo-border-color);
-    padding: 25px;
+    background-color: rgb(18, 4, 88, 0.5);
+   /* border-bottom: 1px solid var(--logo-border-color);*/
+    border-bottom: 0;
+    border-top: 2px solid var(--logo-border-color);
+    padding: 50px 20px 50px 20px;
  
 }
 
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #logo {
     position: static;
     width: 150px;
-    
 }
 
-.logo-container > p {
+.logo > p {
+    letter-spacing: 5px;
     font-family: logoTextFont;
     color: var(--text-color);
-
     font-size: 100px;
+}
+
+.arrowDown {
+    color: var(--text-color);
+    visibility: hidden;
+}
+
+.arrowDown2 {
+    color: var(--text-color);
+    width: 100px;
 }
 
 .material-symbols-outlined {
     font-size: 50px !important;
-    color: var(--text-color);
-    visibility: hidden;
 }
 
 .content-right-side {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     flex-basis: 65%;
-    background-color: var(--main-page-color);
+    background-color: var(--background-logo-color);
     color: var(--text-color);
+    gap: 20px;
 }
 
+.text {
+    font-size: 25px;
+    letter-spacing: 2px;
+    margin-left: 50px; 
+}
 
+.text > p:last-child {
+    margin-top: 20px;
+}
+
+fieldset {
+    width: 100%;
+   background-color: var(--background-logo-color);
+   border: 0px;
+   padding: 25px 0px 25px 0px;
+   border-bottom: 2px solid var(--logo-border-color);
+}
+
+fieldset > h1 {
+    color: var(--logo-border-color);
+    margin-left: 50px;
+    margin-bottom: 25px;
+}
+
+.nameWrapper,
+.contactsWrapper,
+.passwordWrapper {
+    display: flex;
+    gap: 150px;
+    margin-left: 50px;
+    color: white;
+}
+
+.nameWrapper > p,
+.contactsWrapper > p,
+.passwordWrapper > p {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+button {
+    margin: 25px 0px 0px 50px;
+}
+
+.login {
+    margin-left: 50px;
+}
+
+.login > a {
+    text-decoration: none;
+    color: var(--logo-border-color);
+}
+
+input {
+    border-radius: 5px;
+    padding: 6px 12px 6px 12px;
+    box-sizing: border-box;
+    border: 3px solid gray;
+    outline: none;
+    transition: 0.4s;
+}
+
+input:focus {
+    outline: none;
+    border: 3px solid var(--text-color) ;
+    box-shadow: 5px 5px #05d9e850
+}
+
+input[type=email]:invalid {
+    border: 3px solid red;
+}
+
+label {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.btn {
+    width: 200px;
+    padding: 10px 20px 10px 20px;
+    outline: none;
+    border: 2px solid var(--background-logo-color);
+    color: white;
+
+    background-color: var(--logo-border-color);
+    cursor: pointer;
+    border-radius: 5px;
+
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+
+.btn:hover,
+.btn:focus {
+    outline: none;
+    background-color: transparent;
+    border: 2px solid var(--text-color);
+    color: var(--logo-border-color);
+}
+
+.photoCredit {
+    font-size: 10px;
+    color: white;
+    align-self: flex-end;
+    padding-right: 10px;
+    position: absolute;
+    bottom: 5px;
+    
+}
+
+.photoCredit > a {
+    text-decoration: none;
+    color: var(--text-color);
+}
 
 
 @media only screen and (max-width: 1200px) {
@@ -86,12 +237,23 @@
     }
 
    .logo-container {
-    flex-direction: column;
-    align-self: center;
-    height: 500px;
+    position: static;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    height: 320px;
     width: 100%;
     margin-bottom: 0px;
+    padding: 50px 0px 50px 0px;
+    top: 0;
+   }
 
+ 
+
+   .logo > p {
+    font-size: 40px;
+    text-align: left;
+    padding: 0;
    }
 
    .background-img-left {
@@ -99,12 +261,58 @@
     min-height: 100vh;
    }
 
-   .material-symbols-outlined {
+   .arrowDown {
     visibility: visible;
     align-self: center;
     cursor: pointer;
-    transform: rotate(90deg);
+    position: relative;
+    height: 100px;
+    bottom: -30px
+    
    }
+
+   form {
+    display: flex;
+    flex-direction: column;
+   }
+
+    .nameWrapper,
+    .contactsWrapper,
+    .passwordWrapper {
+        flex-direction: column;
+        padding-bottom: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-left: 0px;
+        gap: 0px;
+
+    }
+
+    fieldset >h1 {
+        text-align: center;
+        margin-left: 0px;
+    }
+
+    .btn {
+        align-self: center;
+        margin-left: 0px;
+    }
+
+    .text {
+        margin-left: 30px;
+        margin-right: 25px;
+        margin-top: 50px;
+        font-size: 22px;
+    }
+
+    .login {
+        margin-bottom: 25px;
+    }
+
+    .arrowDown2 {
+        visibility: hidden;
+        display: none;
+    }
 
    
   }

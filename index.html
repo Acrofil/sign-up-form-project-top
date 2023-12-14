@@ -13,21 +13,72 @@
         <div class="container">
             <div class="background-img-left">
                 <div class="logo-container">
-                    <img src="odin-lined.png" alt="odin-logo" id="logo">
-                    <p>ODIN'S HALL</p>
+                    <div class="logo">
+                        <img src="odin-lined.png" alt="odin-logo" id="logo">
+                        <p>ODIN'S HALL</p></div>
+                   <div class="sign">
+                    <img class="arrowDown2" src="mjolnir-removebg-preview.png" alt="">
+                   </div>
                 </div>
-                <span class="material-symbols-outlined">
-                    login
-                    </span>
+                    <a href="#a" class="arrowDown"><span><img class="arrowDown" src="mjolnir-removebg-preview.png" alt=""></span></a>
+                    <span class="photoCredit">Photo by <a href="https://unsplash.com/@chengfengrecord" target=""><u>cheng feng</u></a> on <u>Unsplash</u></span>
             </div>
-            <div class="content-right-side">
+            <div id="a" class="content-right-side">
                 <div class="description">
-                    <div class="text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, possimus! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, perferendis cum numquam deserunt dolor dolore?</p></div>       
+                    <div  class="text">
+                        <p>This is not real online service! You know you need something <br> like this in your life to help you
+                        relize your deepest dreams. <br>
+                        Sign up now to get started. 
+                    </p>
+                    <p>You know you want to.</p>
+                </div>       
                 </div>
-                <div class="form-input"></div>
-            </div>
+                <div class="form-input">
+                    <form action="" method="post">
+                        <fieldset>
+                            <h1>Let's do this!</h1>
+                                <div class="nameWrapper">
+                                    <p>
+                                        <label for="firstName">First Name</label>
+                                        <input type="text" id="firstName" name="firstName" placeholder="Thor" minlength="2" maxlength="30" >
+                                    </p>
+                                    <p>
+                                        <label for="lastName">Last Name</label>
+                                        <input type="text" id="lastName" name="lastName" placeholder="Odinson" minlength="2" maxlength="30" >
+                                    </p>
+                                </div>
+                                <div class="contactsWrapper">
+                                    <p>
+                                        <label for="email">Email</label>
+                                        <input type="email" id="email" name="email" placeholder="godofthunder@mail.com" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required>
+                                    </p>
+                                    <p>
+                                        <label for="phone">Phone Number</label>
+                                        <input type="tel" id="phone" name="phone" placeholder="1234567">
+                                    </p>
+                                </div>
+                                <div class="passwordWrapper">
+                                    <p>
+                                        <label for="password">Password</label>
+                                        <input class="error" type="password" id="possword" name="password" required>
+                                    </p>
+                                    <p>
+                                        <label for="confirmPassword">Confirm password</label>
+                                        <input class="error" type="password" id="confirmPassword" name="confirmPassword" required>
+                                    </p>
+                                </div>
+                                
+                            </ul>
+                        </fieldset>
+                        <button class="btn" type="submit">Create Account</button>
+                    </form>
+                </div>
+                <span class="login">Already have an account? <a href="">Log in</a></span>
+            </div>    
         </div>
     </section>
+
+   
     
     
     

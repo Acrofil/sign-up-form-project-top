@@ -8,12 +8,11 @@
 
 html {
     scroll-behavior: smooth;
+    overflow: hidden;
   }
 
 :root {
-    --main-page-color: #7a04eb;
     --text-color: #05d9e8;
-    --text-color2: #65dc98;
     --logo-border-color: #ff2a6d;
     --background-logo-color: #120458;
 }
@@ -28,7 +27,6 @@ html {
     width: 100%;
     height: 100vh; 
 }
-
 
 .background-img-left {
     flex-basis: 35%;
@@ -49,7 +47,7 @@ html {
     display: flex;
     flex-direction: column;
     position: relative;
-    top: 100px;
+    top: 150px;
     justify-content: center;
     align-items: center;
     background-color: rgb(18, 4, 88, 0.5);
@@ -57,7 +55,6 @@ html {
     border-bottom: 0;
     border-top: 2px solid var(--logo-border-color);
     padding: 25px 20px 25px 20px;
- 
 }
 
 .logo {
@@ -118,7 +115,7 @@ html {
 }
 
 fieldset {
-    width: 100%;
+   width: 100%;
    background-color: var(--background-logo-color);
    border: 0px;
    padding: 25px 0px 25px 0px;
@@ -171,6 +168,10 @@ input {
     border: 3px solid gray;
     outline: none;
     transition: 0.4s;
+}
+
+input:valid {
+    border: 3px solid var(--text-color);
 }
 
 input:focus {
@@ -229,8 +230,13 @@ label {
 }
 
 
+
 @media only screen and (max-width: 1200px) {
     
+    html {
+        overflow: visible;
+    }
+
     .container {
         flex-direction: column;
     }
@@ -258,14 +264,27 @@ label {
     min-height: 100vh;
    }
 
-   .arrowDown {
+   .mjolnir {
     visibility: visible;
     align-self: center;
     cursor: pointer;
-    position: relative;
     height: 100px;
-    bottom: -30px
-    
+   }
+
+   .arrowDown {
+    display: flex;
+    flex-direction: column;
+    visibility: visible;
+    align-self: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    position: relative;
+    bottom: -30px;
+   }
+
+   .arrowDown > p {
+    align-self: center;
    }
 
    form {
@@ -282,7 +301,6 @@ label {
         padding-right: 30px;
         margin-left: 0px;
         gap: 0px;
-
     }
 
     fieldset >h1 {
@@ -310,6 +328,4 @@ label {
         visibility: hidden;
         display: none;
     }
-
-   
   }

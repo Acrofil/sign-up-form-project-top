@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up form</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="sign-up.js" defer></script>
 </head>
 <body>
 
@@ -20,7 +20,7 @@
                     <img class="arrowDown2" src="mjolnir.png" alt="">
                    </div>
                 </div>
-                    <a href="#a" class="arrowDown"><span><img class="arrowDown" src="mjolnir-removebg-preview.png" alt=""></span></a>
+                    <a href="#a" class="arrowDown"><p>Enter</p><span><img class="mjolnir" src="mjolnir.png" alt=""></span></a>
                     <span class="photoCredit">Photo by <a href="https://unsplash.com/@chengfengrecord" target=""><u>cheng feng</u></a> on <u>Unsplash</u></span>
             </div>
             <div id="a" class="content-right-side">
@@ -40,11 +40,11 @@
                                 <div class="nameWrapper">
                                     <p>
                                         <label for="firstName">First Name</label>
-                                        <input type="text" id="firstName" name="firstName" placeholder="Thor" minlength="2" maxlength="30" >
+                                        <input type="text" id="firstName" name="firstName" placeholder="Thor" minlength="2" maxlength="30" required>
                                     </p>
                                     <p>
                                         <label for="lastName">Last Name</label>
-                                        <input type="text" id="lastName" name="lastName" placeholder="Odinson" minlength="2" maxlength="30" >
+                                        <input type="text" id="lastName" name="lastName" placeholder="Odinson" minlength="2" maxlength="30" required>
                                     </p>
                                 </div>
                                 <div class="contactsWrapper">
@@ -54,29 +54,27 @@
                                     </p>
                                     <p>
                                         <label for="phone">Phone Number</label>
-                                        <input type="tel" id="phone" name="phone" placeholder="1234567">
+                                        <input type="tel" id="phone" name="phone" placeholder="1234567" required>
                                     </p>
                                 </div>
                                 <div class="passwordWrapper">
                                     <p>
                                         <label for="password">Password</label>
-                                        <input class="error" type="password" id="possword" name="password" required>
+                                        <input class="error pass1" type="password" id="possword" name="password" required>
                                     </p>
                                     <p>
                                         <label for="confirmPassword">Confirm password</label>
-                                        <input class="error" type="password" id="confirmPassword" name="confirmPassword" required>
+                                        <input class="error pass2" type="password" id="confirmPassword" name="confirmPassword" required>
                                     </p>
                                 </div>
                                 
                             </ul>
                         </fieldset>
-                        <button class="btn" type="submit">Create Account</button>
+                        <button id="submitBtn" class="btn" type="submit">Create Account</button>
                     </form>
                 </div>
                 <span class="login">Already have an account? <a href="">Log in</a></span>
             </div>    
         </div>
     </section>
-
-</body>
 </html>

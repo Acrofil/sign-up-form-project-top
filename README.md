@@ -1,4 +1,4 @@
-#### Sign Up Form page project
+# Sign Up Form page project
 ### For The Odin Project Intermediate HTML and CSS, part of the Full Stack Javascript path
 [link to the project page](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form)
 
@@ -15,4 +15,4 @@
 https://acrofil.github.io/sign-up-form-project-top/
 
 
-![Sign Up Form page](link)
+![Sign Up Form page](https://github.com/Acrofil/sign-up-form-project-top/blob/main/page-preview.png)

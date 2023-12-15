@@ -31,12 +31,13 @@ pass2.onkeyup = function() {
 
 submitBtn.addEventListener("click", (e) => {
 
-    if (!passwordsMatch) {
+    if (!passwordsMatch && pass1.value != 0) {
         submitBtn.setCustomValidity("Check passwords!");
         submitBtn.reportValidity();
         e.preventDefault();
         
-    } else {
+    } else if (passwordsMatch){
         form.submit();
+        
     }
 });

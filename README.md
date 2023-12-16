@@ -5,7 +5,7 @@
 ## Objective
 - Create form
 - Style form
-- Validate form
+- Validate form (client side)
 - Practise Page layout
 - Practise FlexBox
 - Accesibility practise

@@ -1,5 +1,5 @@
-# Sign Up Form page project
-### For The Odin Project Intermediate HTML and CSS, part of the Full Stack Javascript path
+# Sign Up Form
+### A project For "The Odin Project" - Intermediate HTML and CSS, part of the Full Stack Javascript path
 [link to the project page](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form)
 
 ## Objective
